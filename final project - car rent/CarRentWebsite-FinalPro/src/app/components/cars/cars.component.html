@@ -1,0 +1,20 @@
+
+<div *ngIf="selectedCar == null">
+
+    <h1> Our cars: </h1>
+
+    <div class="row">
+        <div class="column" *ngFor="let car of carsWithTypes" 
+             (click)="carClicked(car)" 
+             [class.selected]="car === selectedCar">
+
+                <img src={{car.CarImage}} width="140px" height="100px" />  
+                
+        </div>
+    </div>
+</div>
+
+<div *ngIf="selectedCar != null">
+    <button class="Xbutton" (click)=closeDetailes()> X </button>   
+    <app-car-preview [car]="selectedCar" [closeDetailes]="closeDetailes" ></app-car-preview>
+</div>

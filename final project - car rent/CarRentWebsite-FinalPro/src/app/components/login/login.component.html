@@ -1,0 +1,25 @@
+<form #loginForm="ngForm" (ngSubmit)="loginFunc()" >
+
+    <h1> Login </h1>
+    
+    User name:
+    <input type="text" name="userName" [(ngModel)]="user.UserName"  #userName="ngModel">
+    <span *ngIf="userName.dirty && userName.invalid">Missing User Name.</span>
+    
+    <br><br>
+
+    Password:
+    <input type="text" name="password" [(ngModel)]="user.Password"  #password="ngModel">
+    <span *ngIf="password.dirty && password.invalid">Missing Password.</span>
+
+    <br><br>
+
+    <div>
+        <button mat-button [disabled]="loginForm.form.invalid">
+            Login &nbsp; 
+            <!-- <mat-icon>send</mat-icon> -->
+        </button>
+    </div>
+        
+
+</form>

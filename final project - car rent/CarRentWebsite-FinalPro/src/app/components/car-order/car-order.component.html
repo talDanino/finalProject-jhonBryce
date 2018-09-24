@@ -1,0 +1,37 @@
+<div *ngIf = "carsCatalog === false">
+    <div style="width: 35%; float: left;height: 100%;">
+            <div style="height: 100px; display: block;"> massage </div>
+            <button style="display: block;" (click)="OrderClick()" >Order Car </button>
+            <button style="display: block;" (click)="backToCatalog()" >Back to catalog </button> 
+            
+
+    </div>
+
+    <div style="width: 60%;height: 100%;float:right">
+        <div style="height: 50%; display: block">
+            <p> Supplier Name: {{car.SupplierName}} </p>
+            <p> Car Model: {{car.CarModel}} </p>
+            <p> Daily Cost: {{car.DailyCost}} </p>
+            <p> Daily Delay Cost: {{car.DailyDelayCost}} </p>
+        </div>
+
+        <div style="height: 45%; float:right">
+            
+            <div style=" float:right ">
+                    <input style="width: 50%" type="date" [(ngModel)]="startRent" (input)="onDateChange()" >
+                    <input style="width: 50%" type="date" [(ngModel)]="endRent" (input)="onDateChange()" >
+            </div>
+
+            <br/><br/>
+
+            <div style="height: 50%; float: left;text-align: center; display: block;">calculated price : {{calulatedPrice}}</div>
+            <br/>
+            <div style="height: 50%; float: left;text-align: center; display: block;">price for every delay day : {{car.DailyDelayCost}}</div>
+        </div>
+    </div>
+
+</div>
+
+<div *ngIf = "carsCatalog === true">
+    <app-cars></app-cars>
+</div>

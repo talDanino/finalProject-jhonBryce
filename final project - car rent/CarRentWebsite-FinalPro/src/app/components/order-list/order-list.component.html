@@ -1,0 +1,24 @@
+
+<div *ngIf="selectedOrder == null">
+
+    <h1> Order History </h1>
+
+    <div class="row">
+        <div class="column" *ngFor="let order of ordersWithTypes" 
+            (click)="orderClicked(order)" 
+            [class.selected]="order === selectedOrder">
+
+            <p> Start Date: {{order.StartDate | date:'longDate'}} </p>
+            <p> End Date: {{order.EndDate | date:'longDate'}} </p>
+            <p> Actual Return Date: {{order.ActualReturnDate | date:'longDate'}} </p>
+            <p> Supplier Name: {{order.SupplierName}} </p>
+            <p> Car Model: {{order.CarModel}} </p>
+
+        </div>
+    </div>
+</div>
+
+<div *ngIf="selectedOrder != null">
+    <button class="Xbutton" (click)=closeDetailes()> X </button>
+    <app-order-preview [order]="selectedOrder" [closeDetailes]="closeDetailes" ></app-order-preview>
+</div>

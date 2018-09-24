@@ -1,0 +1,17 @@
+mat-form-field, button {
+    width: 200px;
+    font-size: x-large;
+}
+
+/* input, button, textarea {
+    width: 400px;
+    font-size: x-large;
+    margin: 10px;
+} */
+
+span {
+    margin: 10px;
+    text-align: left;
+    color: red;
+    position: absolute;
+}

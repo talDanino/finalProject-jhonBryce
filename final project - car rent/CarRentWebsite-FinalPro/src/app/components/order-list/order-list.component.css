@@ -1,0 +1,29 @@
+
+.Xbutton{
+    display: block;
+    margin-left: 95%;
+}
+
+
+.column {
+    float: left;
+    width: 200px;
+    border: 5px solid burlywood;
+    padding: 25px;
+    margin: 25px;
+}
+
+.column p {
+    opacity: 0.8; 
+    cursor: pointer; 
+}
+
+.column p:hover {
+    opacity: 1;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+} 

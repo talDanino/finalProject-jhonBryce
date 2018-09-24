@@ -1,0 +1,30 @@
+<div *ngIf = "calcRent === false && orderCar === false" style="height: 500px;">
+        <div style="width: 35%; float: left;height: 100%;">
+            <img src={{car.CarImage}} style="height: 100px; display: block;"/> 
+            <button style="display: block;" (click)=OrderClick()>Order</button>
+            <button style="display: block;" (click)=calculateRentClicked()>Calculate Rent</button>
+        </div>
+
+        <div style="width: 60%;height: 100%;" >
+            
+
+            <p> Car Number: {{car.CarNumber}} </p>
+            <p> Supplier Name: {{car.SupplierName}} </p>
+            <p> Car Model: {{car.CarModel}} </p>
+            <p> Daily Cost: {{car.DailyCost}} </p>
+            <p> Daily Delay Cost: {{car.DailyDelayCost}} </p>
+            <p> Production Year: {{car.ProductionYear}} </p>
+            <p> Transmission: {{car.Transmission}} </p>
+            
+
+        </div>
+        
+</div>
+
+
+<div *ngIf = "calcRent === true">
+    <app-car-price [car]="car" [closeDetailes]="closeDetailes" ></app-car-price>
+</div>
+ <div *ngIf = "orderCar===true">
+        <app-car-order [car]="car"></app-car-order>
+    </div>

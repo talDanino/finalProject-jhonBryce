@@ -1,0 +1,69 @@
+<form #registerForm="ngForm" (ngSubmit)="registerFunc()">
+
+    <h1> Register </h1>
+    <!--full name-->
+        <div>
+            <input type="text" name="FullName" [(ngModel)]="user.FullName" placeholder="Full Name..." autofocus required
+                    #FullName="ngModel">
+            <span *ngIf="FullName.dirty && FullName.invalid">Missing Full Name.</span>
+        </div>
+    
+
+        <!-- ID -->
+        <div>
+            <input matInput type="text" name="ID" [(ngModel)]="user.ID" placeholder="ID..." required 
+                    #ID="ngModel">
+            <span *ngIf="ID.dirty && ID.invalid">Missing ID.</span>
+        </div>
+    
+        <!-- user name -->
+        <div>
+            <input matInput type="UserName" name="UserName" [(ngModel)]="user.UserName" placeholder="User Name..." required 
+                    #UserName="ngModel">
+            <span *ngIf="UserName.dirty && UserName.invalid">Invalid User Name.</span>
+        </div>
+
+        <!--birth day-->
+        <div>
+            <input matInput type="BirthDate" name="BirthDate" [(ngModel)]="user.BirthDate" placeholder="birth date..." required 
+                #BirthDate="ngModel">
+        <span *ngIf="BirthDate.dirty && BirthDate.invalid">Invalid birth date.</span>
+        </div>
+
+        <!--gender-->
+        <div>
+                <input matInput type="Gender" name="Gender" [(ngModel)]="user.Gender" placeholder="Gender..." required 
+                    #Gender="ngModel">
+            <span *ngIf="Gender.dirty && Gender.invalid">Invalid Gender.</span>
+        </div>
+
+
+        <!-- email -->
+        <div>
+                <input matInput type="Email" name="Email" [(ngModel)]="user.Email" placeholder="Email..." email 
+                    #Email="ngModel">
+            <span *ngIf="Email.dirty && Email.invalid">Invalid Email.</span>
+        </div>
+
+
+        <!-- password -->
+        <div>
+                <input matInput type="Password" name="Password" [(ngModel)]="user.Password" placeholder="Password..." required 
+                    #Password="ngModel">
+            <span *ngIf="Password.dirty && Password.invalid">Invalid Password.</span>
+        </div>
+    
+        <br>
+        <!-- register button -->
+        <div>
+            <button mat-button [disabled]="registerForm.form.invalid">
+                Register &nbsp; 
+                <!-- <mat-icon>send</mat-icon> -->
+            </button>
+        </div>
+    
+        <br>
+    
+        <!-- <mat-checkbox>I Agree to the tems and conditions...</mat-checkbox> -->
+    
+    </form>

@@ -1,0 +1,6 @@
+C:\Users\Danino\source\repos\CarRentWebApi\02_BOL\bin\Debug\02_BOL.dll
+C:\Users\Danino\source\repos\CarRentWebApi\02_BOL\bin\Debug\02_BOL.pdb
+C:\Users\Danino\source\repos\CarRentWebApi\02_BOL\obj\Debug\02_BOL.csprojAssemblyReference.cache
+C:\Users\Danino\source\repos\CarRentWebApi\02_BOL\obj\Debug\02_BOL.csproj.CoreCompileInputs.cache
+C:\Users\Danino\source\repos\CarRentWebApi\02_BOL\obj\Debug\02_BOL.dll
+C:\Users\Danino\source\repos\CarRentWebApi\02_BOL\obj\Debug\02_BOL.pdb
